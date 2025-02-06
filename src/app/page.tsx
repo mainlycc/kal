@@ -63,9 +63,9 @@ export default function Home() {
           id="productionYear"
           type="number"
           placeholder="Wprowadź rok produkcji"
-          min="1900"
-          max={new Date().getFullYear()}
           value={productionYear}
+          min={1900}
+          max={new Date().getFullYear()}
           onChange={(e) => setProductionYear(e.target.value)}
           className="text-lg h-12"
         />
@@ -131,18 +131,18 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
         {/* Lewa strona - kalkulator */}
         <div className="flex flex-col items-center justify-center p-8 bg-muted/50 rounded-lg">
-          <Card className="w-full max-w-xl p-6">
+          <Card className="w-full max-w-xl p-6 shadow-2xl">
             <Tabs defaultValue="fakturowy" className="w-full">
-              <TabsList className="grid w-full grid-cols-2 mb-6 h-14">
+              <TabsList className="grid w-full grid-cols-2 mb-6 h-14 shadow-sm">
                 <TabsTrigger 
                   value="fakturowy" 
-                  className="text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm rounded-md transition-all px-2 h-12"
+                  className="text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-md rounded-md transition-all px-2 h-12"
                 >
                   Fakturowy
                 </TabsTrigger>
                 <TabsTrigger 
                   value="casco" 
-                  className="text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm rounded-md transition-all px-2 h-12"
+                  className="text-base data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-md rounded-md transition-all px-2 h-12"
                 >
                   Casco
                 </TabsTrigger>
@@ -159,26 +159,26 @@ export default function Home() {
           </Card>
         </div>
 
-        {/* Prawa strona - oryginalna zawartość */}
+        {/* Prawa strona - zmodyfikowana zawartość */}
         <div className="flex flex-col items-center justify-center p-8 rounded-lg">
-          <Image
-            className="dark:invert mb-8"
-            src="/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-          />
-          <h1 className="text-2xl font-bold mb-4">
-            Witaj w kalkulatorze ubezpieczeniowym
+          <h1 className="text-3xl font-bold mb-6 text-center leading-tight">
+            Znajdź idealne ubezpieczenie dla swojego auta i ciesz się spokojną jazdą
           </h1>
-          <p className="text-center text-muted-foreground text-lg">
+          <p className="text-center text-muted-foreground text-lg max-w-md mb-8">
             Wybierz rodzaj ubezpieczenia i oblicz składkę dla swojego pojazdu.
             <br /><br />
             <span className="font-semibold">Ubezpieczenie fakturowe:</span> Podstawowa stawka 2% wartości pojazdu
             <br />
             <span className="font-semibold">Ubezpieczenie CASCO:</span> Podstawowa stawka 4% wartości pojazdu
           </p>
+          <Image
+            src="/car.svg"
+            alt="Ubezpieczenie samochodu"
+            width={400}
+            height={400}
+            className="mt-4"
+            priority
+          />
         </div>
       </div>
 
