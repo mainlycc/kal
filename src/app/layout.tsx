@@ -8,13 +8,15 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-geist-sans',
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-geist-mono',
 });
 
 export const metadata: Metadata = {
@@ -28,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col relative`}>
+    <html lang="pl" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="antialiased min-h-screen flex flex-col relative">
         <GradientBackground />
         <header className="border-b bg-white/80 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-4">
@@ -45,9 +47,9 @@ export default function RootLayout({
                       </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <Link href="/o-nas" legacyBehavior passHref>
+                      <Link href="/kontakt" legacyBehavior passHref>
                         <NavigationMenuLink className="text-lg font-medium hover:text-primary text-center">
-                          O nas
+                          Nieruchomości
                         </NavigationMenuLink>
                       </Link>
                     </NavigationMenuItem>
@@ -61,11 +63,11 @@ export default function RootLayout({
                   </NavigationMenuList>
                 </NavigationMenu>
               </div>
-              <Button size="lg" className="bg-primary text-white hover:bg-primary/90">
-                <Link href="/path" className="text-lg font-medium">
+              <Link href="/ankieta" className="text-lg font-medium">
+                <Button size="lg" className="bg-primary text-white hover:bg-primary/90">
                   Kup GAP
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </div>
           </div>
         </header>

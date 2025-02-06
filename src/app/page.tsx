@@ -161,14 +161,14 @@ export default function Home() {
 
         {/* Prawa strona - zmodyfikowana zawartość */}
         <div className="flex flex-col items-center justify-center p-8 rounded-lg">
-          <h1 className="text-3xl font-bold mb-6 text-center leading-tight">
+          <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center leading-tight max-w-xl">
             Znajdź idealne ubezpieczenie dla swojego auta i ciesz się spokojną jazdą
           </h1>
-          <p className="text-center text-muted-foreground text-lg max-w-md mb-8">
+          <p className="text-center text-muted-foreground text-base max-w-lg mb-6">
             Wybierz rodzaj ubezpieczenia i oblicz składkę dla swojego pojazdu.
-            <br /><br />
+            <br className="hidden md:block" />
             <span className="font-semibold">Ubezpieczenie fakturowe:</span> Podstawowa stawka 2% wartości pojazdu
-            <br />
+            <br className="hidden md:block" />
             <span className="font-semibold">Ubezpieczenie CASCO:</span> Podstawowa stawka 4% wartości pojazdu
           </p>
           <Image
