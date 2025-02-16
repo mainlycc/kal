@@ -186,40 +186,75 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-16">
         {/* Ubezpieczenie Fakturowe */}
         <Card className="p-6">
-          <h2 className="text-2xl font-bold mb-4">Co to jest ubezpieczenie fakturowe?</h2>
+          <h2 className="text-2xl font-bold mb-4">Co to jest ubezpieczenie GAP fakturowy?</h2>
           <div className="space-y-4 text-muted-foreground">
-            <p>
-              Ubezpieczenie fakturowe to specjalny rodzaj ochrony ubezpieczeniowej dedykowany dla pojazdów zakupionych na fakturę VAT.
+            <p className="leading-relaxed">
+              GAP fakturowy wyrównuje różnicę pomiędzy wartością rzeczywistą (np.
+              wartością rynkową) a wartością określoną w fakturze zakupu, która jest
+              uwzględniana przy ustalaniu odszkodowania za szkodę.
             </p>
-            <h3 className="text-lg font-semibold text-foreground">Główne cechy:</h3>
+            <p className="leading-relaxed">
+              GAP fakturowy może wystąpić, gdy wartość ubezpieczonego przedmiotu (np. pojazdu) 
+              spada w wyniku jego amortyzacji lub innych czynników, ale wartość faktury zakupu
+              może być wyższa, niż rzeczywista wartość rynkowa przedmiotu w momencie szkody.
+            </p>
+            <h3 className="text-lg font-semibold text-foreground mt-6">Główne korzyści:</h3>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Podstawowa stawka: 2% wartości pojazdu</li>
-              <li>Ochrona wartości fakturowej pojazdu</li>
-              <li>Możliwość wyboru okresu ubezpieczenia</li>
-              <li>Uwzględnienie wieku pojazdu w kalkulacji</li>
+              <li>Uzupełnienie różnicy między wartością rynkową a fakturową</li>
+              <li>Ochrona przed skutkami amortyzacji pojazdu</li>
+              <li>Wypłata odszkodowania odpowiadającego wartości zakupu</li>
+              <li>Zabezpieczenie inwestycji w nowy pojazd</li>
             </ul>
-            <p>
-              Składka jest obliczana na podstawie wartości pojazdu, jego wieku oraz wybranego okresu ubezpieczenia.
+            <p className="leading-relaxed mt-4">
+              W przypadku ubezpieczeń, takich jak ubezpieczenie samochodowe,
+              GAP może pomóc w uzupełnieniu tej różnicy, zapewniając wypłatę
+              odszkodowania odpowiadającego wartości zakupu, a nie tylko wartości
+              rynkowej w momencie szkody.
+            </p>
+            <p className="leading-relaxed font-medium mt-4">
+              Tego typu ubezpieczenie jest szczególnie istotne dla osób, które kupiły 
+              nowy pojazd lub drogi sprzęt, ponieważ standardowe ubezpieczenie nie zawsze 
+              pokrywa pełne koszty zakupu w przypadku jego całkowitej utraty.
             </p>
           </div>
         </Card>
 
         {/* Ubezpieczenie CASCO */}
         <Card className="p-6">
-          <h2 className="text-2xl font-bold mb-4">Co to jest ubezpieczenie CASCO?</h2>
+          <h2 className="text-2xl font-bold mb-4">Co to jest ubezpieczenie GAP CASCO?</h2>
           <div className="space-y-4 text-muted-foreground">
-            <p>
-              Ubezpieczenie CASCO (Comprehensive Automobile Service Contract) to dobrowolne ubezpieczenie chroniące pojazd przed różnymi rodzajami ryzyka.
+            <p className="leading-relaxed">
+              GAP CASCO to rodzaj ubezpieczenia samochodowego, które chroni
+              właściciela pojazdu przed stratą finansową wynikającą z różnicy między
+              wartością rynkową pojazdu a wartością określoną w umowie ubezpieczenia w
+              przypadku jego całkowitej utraty (np. w wyniku kradzieży lub zniszczenia).
             </p>
-            <h3 className="text-lg font-semibold text-foreground">Główne cechy:</h3>
+            
+            <p className="leading-relaxed">
+              W standardowym ubezpieczeniu CASCO, odszkodowanie wypłacane jest na
+              podstawie wartości rynkowej pojazdu w momencie szkody, co może oznaczać,
+              że właściciel nie otrzyma pełnej kwoty, którą zapłacił za auto.
+            </p>
+
+            <h3 className="text-lg font-semibold text-foreground mt-6">Główne cechy:</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>Podstawowa stawka: 4% wartości pojazdu</li>
               <li>Szeroka ochrona ubezpieczeniowa</li>
               <li>Elastyczny wybór okresu ubezpieczenia</li>
               <li>Wyższy współczynnik za wiek pojazdu</li>
             </ul>
-            <p>
-              Wysokość składki zależy od wartości pojazdu, jego wieku oraz długości okresu ubezpieczenia, z uwzględnieniem wyższego współczynnika ryzyka.
+
+            <p className="leading-relaxed mt-4">
+              GAP CASCO uzupełnia tę różnicę, wypłacając odszkodowanie odpowiadające wartości
+              zakupu pojazdu, czyli kwocie, którą właściciel zapłacił za auto w momencie
+              jego zakupu, a nie jego obecnej wartości rynkowej (która może być znacznie
+              niższa).
+            </p>
+
+            <p className="leading-relaxed font-medium mt-4">
+              Tego typu ubezpieczenie jest szczególnie korzystne dla właścicieli
+              nowych samochodów, którzy obawiają się, że ich pojazd może szybko stracić
+              na wartości po zakupie.
             </p>
           </div>
         </Card>

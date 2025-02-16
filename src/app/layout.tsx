@@ -38,33 +38,30 @@ export default function RootLayout({
             <div className="flex justify-between items-center">
               <div className="flex-1 flex justify-center">
                 <NavigationMenu>
-                  <NavigationMenuList className="gap-8">
+                  <NavigationMenuList>
                     <NavigationMenuItem>
-                      <Link href="/" legacyBehavior passHref>
-                        <NavigationMenuLink className="text-lg font-medium hover:text-primary text-center">
-                          Strona główna
-                        </NavigationMenuLink>
-                      </Link>
+                      <NavigationMenuLink href="/">
+                        Strona główna
+                      </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <Link href="/kontakt" legacyBehavior passHref>
-                        <NavigationMenuLink className="text-lg font-medium hover:text-primary text-center">
-                          Nieruchomości
-                        </NavigationMenuLink>
-                      </Link>
+                      <NavigationMenuLink href="/o-nas">
+                        O Nas
+                      </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                      <Link href="/kontakt" legacyBehavior passHref>
-                        <NavigationMenuLink className="text-lg font-medium hover:text-primary text-center">
-                          Kontakt
-                        </NavigationMenuLink>
-                      </Link>
+                      <NavigationMenuLink href="/kontakt">
+                        Kontakt
+                      </NavigationMenuLink>
                     </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>
               </div>
-              <Link href="/ankieta" className="text-lg font-medium">
-                <Button size="lg" className="bg-primary text-white hover:bg-primary/90">
+              <Link href="/ankieta" className="text-xl font-medium">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-white transition-colors duration-200 text-xl px-8 py-6"
+                >
                   Kup GAP
                 </Button>
               </Link>
