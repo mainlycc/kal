@@ -185,9 +185,9 @@ export default function Home() {
       {/* Nowa sekcja "Co to jest" */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-16">
         {/* Ubezpieczenie Fakturowe */}
-        <Card className="p-6">
-          <h2 className="text-2xl font-bold mb-4">Co to jest ubezpieczenie GAP fakturowy?</h2>
-          <div className="space-y-4 text-muted-foreground">
+        <Card className="p-6 bg-red-300/100 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-white/95">Co to jest ubezpieczenie GAP fakturowy?</h2>
+          <div className="space-y-4 text-white/95">
             <p className="leading-relaxed">
               GAP fakturowy wyrównuje różnicę pomiędzy wartością rzeczywistą (np.
               wartością rynkową) a wartością określoną w fakturze zakupu, która jest
@@ -198,7 +198,7 @@ export default function Home() {
               spada w wyniku jego amortyzacji lub innych czynników, ale wartość faktury zakupu
               może być wyższa, niż rzeczywista wartość rynkowa przedmiotu w momencie szkody.
             </p>
-            <h3 className="text-lg font-semibold text-foreground mt-6">Główne korzyści:</h3>
+            <h3 className="text-lg font-semibold text-white mt-6">Główne korzyści:</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>Uzupełnienie różnicy między wartością rynkową a fakturową</li>
               <li>Ochrona przed skutkami amortyzacji pojazdu</li>
@@ -220,9 +220,9 @@ export default function Home() {
         </Card>
 
         {/* Ubezpieczenie CASCO */}
-        <Card className="p-6">
-          <h2 className="text-2xl font-bold mb-4">Co to jest ubezpieczenie GAP CASCO?</h2>
-          <div className="space-y-4 text-muted-foreground">
+        <Card className="p-6 bg-blue-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 rounded-xl">
+          <h2 className="text-2xl font-bold mb-4 text-white/95">Co to jest ubezpieczenie GAP CASCO?</h2>
+          <div className="space-y-4 text-white/95">
             <p className="leading-relaxed">
               GAP CASCO to rodzaj ubezpieczenia samochodowego, które chroni
               właściciela pojazdu przed stratą finansową wynikającą z różnicy między
@@ -236,7 +236,7 @@ export default function Home() {
               że właściciel nie otrzyma pełnej kwoty, którą zapłacił za auto.
             </p>
 
-            <h3 className="text-lg font-semibold text-foreground mt-6">Główne cechy:</h3>
+            <h3 className="text-lg font-semibold text-white mt-6">Główne cechy:</h3>
             <ul className="list-disc pl-5 space-y-2">
               <li>Podstawowa stawka: 4% wartości pojazdu</li>
               <li>Szeroka ochrona ubezpieczeniowa</li>

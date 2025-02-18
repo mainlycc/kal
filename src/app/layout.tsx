@@ -50,6 +50,11 @@ export default function RootLayout({
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
+                      <NavigationMenuLink href="/faq">
+                        FAQ
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
                       <NavigationMenuLink href="/kontakt">
                         Kontakt
                       </NavigationMenuLink>
