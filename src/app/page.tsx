@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { FileText, ShieldCheck, TrendingDown, Banknote, Car, Clock } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -131,7 +132,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
         {/* Lewa strona - kalkulator */}
         <div className="flex flex-col items-center justify-center p-8 bg-muted/50 rounded-lg">
-          <Card className="w-full max-w-xl p-6 shadow-2xl">
+          <Card className="w-full max-w-xl p-6 shadow-2xl border-8 border-blue-500/50 hover:border-green-500 transition-colors duration-300">
             <Tabs defaultValue="fakturowy" className="w-full">
               <TabsList className="grid w-full grid-cols-2 mb-6 h-14 shadow-sm">
                 <TabsTrigger 
@@ -161,15 +162,21 @@ export default function Home() {
 
         {/* Prawa strona - zmodyfikowana zawartość */}
         <div className="flex flex-col items-center justify-center p-8 rounded-lg">
-          <h1 className="text-2xl md:text-3xl font-bold mb-4 text-center leading-tight max-w-xl">
+          <h1 className="text-[40px] leading-tight font-bold mb-4 text-center max-w-xl">
             Znajdź idealne ubezpieczenie dla swojego auta i ciesz się spokojną jazdą
           </h1>
           <p className="text-center text-muted-foreground text-base max-w-lg mb-6">
             Wybierz rodzaj ubezpieczenia i oblicz składkę dla swojego pojazdu.
             <br className="hidden md:block" />
-            <span className="font-semibold">Ubezpieczenie fakturowe:</span> Podstawowa stawka 2% wartości pojazdu
+            <span className="font-semibold inline-flex items-center">
+              <FileText className="w-5 h-5 mr-1 text-primary" />
+              Ubezpieczenie fakturowe:
+            </span> Podstawowa stawka 2% wartości pojazdu
             <br className="hidden md:block" />
-            <span className="font-semibold">Ubezpieczenie CASCO:</span> Podstawowa stawka 4% wartości pojazdu
+            <span className="font-semibold inline-flex items-center">
+              <Car className="w-5 h-5 mr-1 text-primary" />
+              Ubezpieczenie CASCO:
+            </span> Podstawowa stawka 4% wartości pojazdu
           </p>
           <Image
             src="/car.svg"
@@ -185,77 +192,81 @@ export default function Home() {
       {/* Nowa sekcja "Co to jest" */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-16">
         {/* Ubezpieczenie Fakturowe */}
-        <Card className="p-6 bg-red-300/100 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 rounded-xl">
-          <h2 className="text-2xl font-bold mb-4 text-white/95">Co to jest ubezpieczenie GAP fakturowy?</h2>
-          <div className="space-y-4 text-white/95">
+        <Card className="p-6 bg-[#982F42] shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 rounded-xl hover:-translate-y-2 hover:rotate-1 cursor-pointer">
+          <h2 className="flex items-center text-2xl font-bold mb-4 text-white">
+            <div className="bg-white p-2 rounded-full mr-3">
+              <FileText className="text-[#982F42]" />
+            </div>
+            Co to jest ubezpieczenie GAP fakturowy?
+          </h2>
+          <div className="space-y-4 text-white">
             <p className="leading-relaxed">
-              GAP fakturowy wyrównuje różnicę pomiędzy wartością rzeczywistą (np.
-              wartością rynkową) a wartością określoną w fakturze zakupu, która jest
-              uwzględniana przy ustalaniu odszkodowania za szkodę.
+              GAP fakturowy to ubezpieczenie, które wyrównuje różnicę między wartością rynkową pojazdu
+              a wartością z faktury zakupu w przypadku szkody całkowitej lub kradzieży. Jest szczególnie
+              korzystne dla właścicieli nowych pojazdów, którzy chcą zabezpieczyć się przed utratą wartości auta.
             </p>
             <p className="leading-relaxed">
-              GAP fakturowy może wystąpić, gdy wartość ubezpieczonego przedmiotu (np. pojazdu) 
-              spada w wyniku jego amortyzacji lub innych czynników, ale wartość faktury zakupu
-              może być wyższa, niż rzeczywista wartość rynkowa przedmiotu w momencie szkody.
+              Dzięki temu ubezpieczeniu otrzymujesz odszkodowanie równe początkowej wartości pojazdu,
+              niezależnie od jego aktualnej wartości rynkowej.
             </p>
-            <h3 className="text-lg font-semibold text-white mt-6">Główne korzyści:</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Uzupełnienie różnicy między wartością rynkową a fakturową</li>
-              <li>Ochrona przed skutkami amortyzacji pojazdu</li>
-              <li>Wypłata odszkodowania odpowiadającego wartości zakupu</li>
-              <li>Zabezpieczenie inwestycji w nowy pojazd</li>
+            <h3 className="text-xl font-semibold mb-4 text-white">Główne korzyści:</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center bg-white/10 p-3 rounded">
+                <TrendingDown className="mr-3 text-green-600" />
+                <span className="text-white">Uzupełnienie różnicy między wartością rynkową a fakturową</span>
+              </li>
+              <li className="flex items-center bg-white/10 p-3 rounded">
+                <ShieldCheck className="mr-3 text-blue-600" />
+                <span className="text-white">Ochrona przed skutkami amortyzacji pojazdu</span>
+              </li>
+              <li className="flex items-center bg-white/10 p-3 rounded">
+                <Banknote className="mr-3 text-yellow-600" />
+                <span className="text-white">Wypłata odszkodowania odpowiadającego wartości zakupu</span>
+              </li>
+              <li className="flex items-center bg-white/10 p-3 rounded">
+                <Car className="mr-3 text-red-600" />
+                <span className="text-white">Zabezpieczenie inwestycji w nowy pojazd</span>
+              </li>
             </ul>
-            <p className="leading-relaxed mt-4">
-              W przypadku ubezpieczeń, takich jak ubezpieczenie samochodowe,
-              GAP może pomóc w uzupełnieniu tej różnicy, zapewniając wypłatę
-              odszkodowania odpowiadającego wartości zakupu, a nie tylko wartości
-              rynkowej w momencie szkody.
-            </p>
-            <p className="leading-relaxed font-medium mt-4">
-              Tego typu ubezpieczenie jest szczególnie istotne dla osób, które kupiły 
-              nowy pojazd lub drogi sprzęt, ponieważ standardowe ubezpieczenie nie zawsze 
-              pokrywa pełne koszty zakupu w przypadku jego całkowitej utraty.
-            </p>
           </div>
         </Card>
 
         {/* Ubezpieczenie CASCO */}
-        <Card className="p-6 bg-blue-200 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 rounded-xl">
-          <h2 className="text-2xl font-bold mb-4 text-white/95">Co to jest ubezpieczenie GAP CASCO?</h2>
-          <div className="space-y-4 text-white/95">
+        <Card className="p-6 bg-blue-500 shadow-[0_10px_30px_rgba(0,0,0,0.25)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 rounded-xl hover:-translate-y-2 hover:rotate-1 cursor-pointer">
+          <h2 className="flex items-center text-2xl font-bold mb-4 text-black">
+            <div className="bg-white p-2 rounded-full mr-3">
+              <Car className="text-blue-600" />
+            </div>
+            Co to jest ubezpieczenie GAP CASCO?
+          </h2>
+          <div className="space-y-4 text-black">
             <p className="leading-relaxed">
-              GAP CASCO to rodzaj ubezpieczenia samochodowego, które chroni
-              właściciela pojazdu przed stratą finansową wynikającą z różnicy między
-              wartością rynkową pojazdu a wartością określoną w umowie ubezpieczenia w
-              przypadku jego całkowitej utraty (np. w wyniku kradzieży lub zniszczenia).
+              GAP CASCO chroni przed stratą finansową wynikającą z różnicy między wartością rynkową
+              pojazdu a wartością z polisy w przypadku szkody całkowitej lub kradzieży.
             </p>
-            
             <p className="leading-relaxed">
-              W standardowym ubezpieczeniu CASCO, odszkodowanie wypłacane jest na
-              podstawie wartości rynkowej pojazdu w momencie szkody, co może oznaczać,
-              że właściciel nie otrzyma pełnej kwoty, którą zapłacił za auto.
+              To rozszerzenie standardowego ubezpieczenia AC, które gwarantuje wypłatę pełnej kwoty
+              z polisy, nawet jeśli wartość pojazdu znacząco spadła.
             </p>
-
-            <h3 className="text-lg font-semibold text-white mt-6">Główne cechy:</h3>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>Podstawowa stawka: 4% wartości pojazdu</li>
-              <li>Szeroka ochrona ubezpieczeniowa</li>
-              <li>Elastyczny wybór okresu ubezpieczenia</li>
-              <li>Wyższy współczynnik za wiek pojazdu</li>
+            <h3 className="text-xl font-semibold mb-4 text-black">Główne cechy:</h3>
+            <ul className="space-y-3">
+              <li className="flex items-center bg-white p-3 rounded">
+                <Banknote className="mr-3 text-green-600" />
+                Podstawowa stawka: 4% wartości pojazdu
+              </li>
+              <li className="flex items-center bg-white p-3 rounded">
+                <ShieldCheck className="mr-3 text-blue-600" />
+                Szeroka ochrona ubezpieczeniowa
+              </li>
+              <li className="flex items-center bg-white p-3 rounded">
+                <Clock className="mr-3 text-yellow-600" />
+                Elastyczny wybór okresu ubezpieczenia
+              </li>
+              <li className="flex items-center bg-white p-3 rounded">
+                <TrendingDown className="mr-3 text-red-600" />
+                Wyższy współczynnik za wiek pojazdu
+              </li>
             </ul>
-
-            <p className="leading-relaxed mt-4">
-              GAP CASCO uzupełnia tę różnicę, wypłacając odszkodowanie odpowiadające wartości
-              zakupu pojazdu, czyli kwocie, którą właściciel zapłacił za auto w momencie
-              jego zakupu, a nie jego obecnej wartości rynkowej (która może być znacznie
-              niższa).
-            </p>
-
-            <p className="leading-relaxed font-medium mt-4">
-              Tego typu ubezpieczenie jest szczególnie korzystne dla właścicieli
-              nowych samochodów, którzy obawiają się, że ich pojazd może szybko stracić
-              na wartości po zakupie.
-            </p>
           </div>
         </Card>
       </div>
